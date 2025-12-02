@@ -9,3 +9,13 @@ def read_input(file_path: str) -> List:
 	except Exception as e:
 		print(f"Error {e} with reading input {file_path}")
 		return []
+
+def read_input_w_comma(file_path: str) -> List:
+	try:
+		with open(file_path, 'r') as f:
+			content = f.read()
+			content_split = content.replace("\n", "").split(",")
+			return content_split
+	except Exception as e:
+		print(f"Error {e} with reading input {file_path}")
+		return []
